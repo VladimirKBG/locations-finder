@@ -1,0 +1,24 @@
+package com.naumen_contest.locationsfinder.Service.Dao;
+
+import java.io.IOException;
+import org.apache.commons.io.FilenameUtils;
+import org.springframework.stereotype.Service;
+
+/**
+ *
+ * @author Vladimir Aleksentsev
+ */
+@Service
+public class DaoFactory {
+    
+    public LocationsDao CreateLocationsDao(String path) throws IOException {
+        LocationsDao reader;
+        String ext = FilenameUtils.getExtension(path).toLowerCase();
+        if (ext.equals("txt"))
+            reader = new LocationsDaoTxt(path);
+        else
+            throw new UnsupportedOperationException("Input data file with '%s' extenshion does not supported.".formatted(ext));
+        return reader;
+    }
+    
+}
