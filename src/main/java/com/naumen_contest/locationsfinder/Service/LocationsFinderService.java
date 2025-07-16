@@ -31,6 +31,10 @@ public class LocationsFinderService {
         
         LocationsDto inputData = locationsDao.readInputData(dtoFactory);
         
+        
+        
+        
+        
         System.out.println(inputData);
     }
 

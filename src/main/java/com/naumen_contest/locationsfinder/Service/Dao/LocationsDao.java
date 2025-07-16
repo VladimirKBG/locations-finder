@@ -9,5 +9,5 @@ import java.io.IOException;
  * @author Vladimir Aleksentsev
  */
 public interface LocationsDao {
-    public InputLocationsDto readInputData(DtoFactory containerFactory) throws IOException;
+    public InputLocationsDto readInputData(DtoFactory dtoFactory) throws IOException;
 }
