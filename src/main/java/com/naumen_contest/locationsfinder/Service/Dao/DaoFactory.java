@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class DaoFactory {
     
-    public LocationsDao CreateLocationsDao(String path) throws IOException {
+    public LocationsDao getLocationsDao(String path) throws IOException {
         LocationsDao reader;
         String ext = FilenameUtils.getExtension(path).toLowerCase();
         if (ext.equals("txt"))

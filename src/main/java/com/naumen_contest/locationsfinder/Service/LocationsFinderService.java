@@ -27,7 +27,7 @@ public class LocationsFinderService {
     
     public void ProcessLocationsFromFile(String inputFile, String outputFile) throws IOException {
         LocationsDao locationsDao = 
-                daoFactory.CreateLocationsDao(inputFile); 
+                daoFactory.getLocationsDao(inputFile); 
         
         LocationsDto inputData = locationsDao.readInputData(dtoFactory);
         

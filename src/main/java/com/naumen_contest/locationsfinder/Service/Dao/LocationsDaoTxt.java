@@ -87,7 +87,7 @@ public class LocationsDaoTxt implements LocationsDao {
                 }
                 locations.add(new Location(x, y));
             }
-            return dtoFactory.createLocationsDto(count, range, locations);
+            return dtoFactory.getLocationsDto(count, range, locations);
         }    
     }
 }

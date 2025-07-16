@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * Created by Vladimir Aleksentsev, 2025
  */
 @Component
-@ConfigurationProperties()
+@ConfigurationProperties
 public class Config {
     
     private static final Config instance = new Config();
