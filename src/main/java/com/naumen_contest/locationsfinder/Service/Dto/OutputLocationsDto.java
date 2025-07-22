@@ -16,8 +16,5 @@ public class OutputLocationsDto implements LocationsDto {
     public OutputLocationsDto(List<Location> locations, Map score) {
         this.locations = locations;
         this.score = score;
-    }
-    
-    
-
+    } 
 }
