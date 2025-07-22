@@ -10,4 +10,5 @@ import java.io.IOException;
  */
 public interface LocationsDao {
     public InputLocationsDto readInputData(DtoFactory dtoFactory) throws IOException;
+
 }

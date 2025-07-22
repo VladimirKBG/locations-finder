@@ -7,6 +7,8 @@ import com.naumen_contest.locationsfinder.Service.Dao.LocationsDao;
 import com.naumen_contest.locationsfinder.Service.Dto.DtoFactory;
 import com.naumen_contest.locationsfinder.Service.Dto.LocationsDto;
 import java.io.IOException;
+import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,9 +18,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class LocationsFinderService {
     private final Config config;
-    private final DaoFactory daoFactory;
+    private final Map<String, LocationsDao> daoFactory;
+    //private final DaoFactory daoFactory;
     private final DtoFactory dtoFactory;
 
+    @Autowired
     public LocationsFinderService(Config config, DaoFactory daoFactory, DtoFactory dtoFactory) {
         this.config = config;
         this.daoFactory = daoFactory;

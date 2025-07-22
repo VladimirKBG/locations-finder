@@ -15,13 +15,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.springframework.stereotype.Component;
 
 
 /**
  *
  * @author user
  */
-
+@Component("txt")
 public class LocationsDaoTxt implements LocationsDao {
     private String separator;
     private String decimalSeparator = "\\.";
