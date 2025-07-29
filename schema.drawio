@@ -55,13 +55,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Uh4zMgH3YETvn9Bq5Nq5-1" value="&lt;b&gt;LocationsDTOWithR&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="Uh4zMgH3YETvn9Bq5Nq5-1" value="&lt;b&gt;LocationsParserWithR&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="379.97" y="540" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Uh4zMgH3YETvn9Bq5Nq5-2" value="&lt;b style=&quot;font-size: 10px;&quot;&gt;LocationsDTOWithP&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="Uh4zMgH3YETvn9Bq5Nq5-2" value="&lt;b style=&quot;font-size: 10px;&quot;&gt;Locations&lt;/b&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Parser&lt;/b&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;WithP&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="379.97" y="600" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Uh4zMgH3YETvn9Bq5Nq5-3" value="&lt;b&gt;LocationsDTOWithCV&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="Uh4zMgH3YETvn9Bq5Nq5-3" value="&lt;b&gt;Locations&lt;/b&gt;&lt;b&gt;Parser&lt;/b&gt;&lt;b&gt;WithCV&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="379.97" y="660" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="Uh4zMgH3YETvn9Bq5Nq5-4" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="Uh4zMgH3YETvn9Bq5Nq5-1" target="3CFo-SsumBQ2UMizdYn2-1">
@@ -97,13 +97,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Uh4zMgH3YETvn9Bq5Nq5-7" value="&lt;b&gt;LocationsDTOWithR&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="Uh4zMgH3YETvn9Bq5Nq5-7" value="&lt;b&gt;LocationsTxtDAO&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="609.97" y="540" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Uh4zMgH3YETvn9Bq5Nq5-8" value="&lt;b style=&quot;font-size: 10px;&quot;&gt;LocationsDTOWithP&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="Uh4zMgH3YETvn9Bq5Nq5-8" value="&lt;b style=&quot;font-size: 10px;&quot;&gt;LocationsJsonDAO&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="609.97" y="600" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Uh4zMgH3YETvn9Bq5Nq5-9" value="&lt;b&gt;LocationsDTOWithCV&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="Uh4zMgH3YETvn9Bq5Nq5-9" value="&lt;b&gt;LocationsMapDAO&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="609.97" y="660" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="Uh4zMgH3YETvn9Bq5Nq5-10" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="Uh4zMgH3YETvn9Bq5Nq5-7" target="3CFo-SsumBQ2UMizdYn2-2">
