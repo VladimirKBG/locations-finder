@@ -15,7 +15,7 @@ public class DaoFactory {
         LocationsDAO reader;
         String ext = FilenameUtils.getExtension(path).toLowerCase();
         if (ext.equals("txt"))
-            reader = new LocationsDaoTxt(path);
+            reader = new LocationsDAOTxt(path);
         else
             throw new UnsupportedOperationException("Input data file with '%s' extenshion does not supported.".formatted(ext));
         return reader;
