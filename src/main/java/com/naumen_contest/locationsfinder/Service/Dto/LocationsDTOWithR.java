@@ -7,11 +7,11 @@ import java.util.List;
  *
  * @author user
  */
-public class InputLocationsDto implements LocationsDto {
+public class LocationsDTOWithR implements LocationsDto {
     private final double radius;
     private final List<Location> locations;
 
-    public InputLocationsDto(int N, double radius, List<Location> locations) {
+    public LocationsDTOWithR(int N, double radius, List<Location> locations) {
         if (radius <= 0)
             throw new IllegalArgumentException("Radius must be > 0");
         if (N < 0)

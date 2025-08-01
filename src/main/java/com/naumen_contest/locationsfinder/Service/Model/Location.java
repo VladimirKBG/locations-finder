@@ -18,6 +18,12 @@ public class Location {
         this.y = y;
         this.id = count++;
     }
+    
+    public double squareDistanceTo(Location other) {
+        double dx = x - other.X();
+        double dy = y - other.Y();
+        return Math.pow(dx, 2) + Math.pow(dy,2);
+    }
 
     public double X() {
         return x;

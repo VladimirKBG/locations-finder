@@ -1,7 +1,7 @@
 
 package com.naumen_contest.locationsfinder.Dto;
 
-import com.naumen_contest.locationsfinder.Service.Dto.InputLocationsDto;
+import com.naumen_contest.locationsfinder.Service.Dto.LocationsDTOWithR;
 import com.naumen_contest.locationsfinder.Service.Model.Location;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class InputLocationsDtoTest {
         int N = 0;
         double R = 0.1d;
         List<Location> locations = new ArrayList<>(0);
-        InputLocationsDto idc = new InputLocationsDto(N, R, locations);
+        LocationsDTOWithR idc = new LocationsDTOWithR(N, R, locations);
         assertEquals(N, idc.getSize());
         assertEquals(R, idc.getRadius());
         assertEquals(locations, idc.getLocations());
@@ -37,7 +37,7 @@ public class InputLocationsDtoTest {
                 new Location(-4,3),
                 new Location(4,-5)
         ));
-        InputLocationsDto idc = new InputLocationsDto(N, R, locations);
+        LocationsDTOWithR idc = new LocationsDTOWithR(N, R, locations);
         assertEquals(N, idc.getSize());
         assertEquals(R, idc.getRadius());
         assertEquals(locations, idc.getLocations());
@@ -49,7 +49,7 @@ public class InputLocationsDtoTest {
         int N;
         double R;
         List<Location> locations;
-        InputLocationsDto idc;
+        LocationsDTOWithR idc;
         for (int i = 0; i < testCount; i++) {
             System.out.println(i);
             N = ThreadLocalRandom.current().nextInt(1, 10000000);
@@ -60,7 +60,7 @@ public class InputLocationsDtoTest {
                 double y = ThreadLocalRandom.current().nextDouble(-1.7e100, 1.7e100);
                 locations.add(new Location(x, y));
             }
-            idc = new InputLocationsDto(N, R, locations);
+            idc = new LocationsDTOWithR(N, R, locations);
             assertEquals(N, idc.getSize());
             assertEquals(R, idc.getRadius());
             assertEquals(locations, idc.getLocations());
