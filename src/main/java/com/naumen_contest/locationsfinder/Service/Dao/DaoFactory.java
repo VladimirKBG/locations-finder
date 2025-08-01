@@ -11,11 +11,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class DaoFactory {
     
-    public LocationsDAO getLocationsDao(String path) throws IOException {
-        LocationsDAO reader;
+    public LocationsDAO1 getLocationsDao(String path) throws IOException {
+        LocationsDAO1 reader;
         String ext = FilenameUtils.getExtension(path).toLowerCase();
         if (ext.equals("txt"))
-            reader = new LocationsDAOTxt(path);
+            reader = new LocationsDAOTxt1(path);
         else
             throw new UnsupportedOperationException("Input data file with '%s' extenshion does not supported.".formatted(ext));
         return reader;
