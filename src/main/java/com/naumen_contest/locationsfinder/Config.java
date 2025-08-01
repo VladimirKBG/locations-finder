@@ -14,11 +14,17 @@ public class Config {
     
     private static final Config instance = new Config();
     
-    private final int bruteForceThreshold = 10;
-    private final int outputLocationsCount = 10;
-    private final int locationIdBase = 0;
     private final String inputDataPath = "input.txt";
     private final String outputDataPath = "output.txt";
+    private final String applicationRunMode = "byScore";
+    private final String locationsScoreCriteria = "neighborsCount";
+    private final long outputLocationsCount = 10;
+    private final String columnSeparator = "\\s";
+    private final String decimalSeparator = "\\.";
+    
+    private final int bruteForceThreshold = 10;
+    private final int locationIdBase = 0;
+
     private final int calculationAccuracy = 6;
     
     private Config() {
@@ -32,7 +38,7 @@ public class Config {
         return bruteForceThreshold;
     }
 
-    public int getOutputLocationsCount() {
+    public long getOutputLocationsCount() {
         return outputLocationsCount;
     }
 
@@ -51,6 +57,25 @@ public class Config {
     public int getCalculationAccuracy() {
         return calculationAccuracy;
     }
+
+    public String getApplicationRunMode() {
+        return applicationRunMode;
+    }
+
+    public String getLocationsScoreCriteria() {
+        return locationsScoreCriteria;
+    }
+
+    public String getColumnSeparator() {
+        return columnSeparator;
+    }
+
+    public String getDecimalSeparator() {
+        return decimalSeparator;
+    }
+    
+    
+    
     
     @Override
     public String toString() {

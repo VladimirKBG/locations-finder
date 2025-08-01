@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class DtoFactory {
-    public InputLocationsDto getLocationsDto(int N, double radius, List<Location> locations) {
-        return new InputLocationsDto(N, radius, locations);
+    public LocationsDTOWithR getLocationsDto(int N, double radius, List<Location> locations) {
+        return new LocationsDTOWithR(N, radius, locations);
     }
 }

@@ -1,7 +1,7 @@
 
 package com.naumen_contest.locationsfinder.Service.Strategy;
 
-import com.naumen_contest.locationsfinder.Service.Dto.InputLocationsDto;
+import com.naumen_contest.locationsfinder.Service.Dto.LocationsDTOWithR;
 import com.naumen_contest.locationsfinder.Service.Dto.OutputLocationsDto;
 
 /**
@@ -11,7 +11,7 @@ import com.naumen_contest.locationsfinder.Service.Dto.OutputLocationsDto;
 public class KDTreeNeighborsCountingStrategy implements NeighborsCountingStrategy {
 
     @Override
-    public OutputLocationsDto countNeighbors(InputLocationsDto inputDto) {
+    public OutputLocationsDto countNeighbors(LocationsDTOWithR inputDto) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
