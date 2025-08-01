@@ -4,6 +4,6 @@ package com.naumen_contest.locationsfinder.Service.Dto;
  *
  * @author Vladimir Aleksentsev
  */
-public interface LocationsDTO1 {
+public interface LocationsDTO {
     
 }

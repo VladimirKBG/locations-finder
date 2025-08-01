@@ -3,7 +3,7 @@ package com.naumen_contest.locationsfinder.Service.Parser;
 import com.naumen_contest.locationsfinder.Config;
 import java.io.IOException;
 import java.util.List;
-import com.naumen_contest.locationsfinder.Service.Dto.LocationsDTO1;
+import com.naumen_contest.locationsfinder.Service.Dto.LocationsDTO;
 
 /**
  *
@@ -27,5 +27,5 @@ public abstract class LocationsParser {
         dbl = "([+-]?\\d*(?:" + decimalSeparator + "\\d+(?:[eE][+-]?\\d+)?)?)";
     }
     
-    abstract public LocationsDTO1 parseData(List<String> rawData) throws IOException;
+    abstract public LocationsDTO parseData(List<String> rawData) throws IOException;
 }

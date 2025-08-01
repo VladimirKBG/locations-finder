@@ -9,7 +9,7 @@ import java.util.Map;
  *
  * Created by Vladimir Aleksentsev, 2025
  */
-public class OutputLocationsDto implements LocationsDTO1 {
+public class OutputLocationsDto implements LocationsDTO {
     private final List<Location> locations;
     private final Map<Long, Long> score;
 
