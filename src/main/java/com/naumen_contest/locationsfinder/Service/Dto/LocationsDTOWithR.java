@@ -7,7 +7,7 @@ import java.util.List;
  *
  * @author user
  */
-public class LocationsDTOWithR implements LocationsDto {
+public class LocationsDTOWithR implements LocationsDto222 {
     private final double radius;
     private final List<Location> locations;
 
