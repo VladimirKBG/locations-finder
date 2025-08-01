@@ -15,7 +15,7 @@ import java.util.List;
  * @author user
  */
 
-public class LocationsDAOTxt implements LocationsDAO {
+public class LocationsDAOTxt222 implements LocationsDAO222 {
     
     @Override
     public List<String> readFromFile(String fileName) throws IOException{

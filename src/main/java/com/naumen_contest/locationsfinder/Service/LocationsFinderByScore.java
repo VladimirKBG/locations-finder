@@ -1,7 +1,6 @@
 
 package com.naumen_contest.locationsfinder.Service;
 
-import com.naumen_contest.locationsfinder.Service.Dao.LocationsDAO;
 import java.io.IOException;
 import java.util.Comparator;
 import java.util.List;
@@ -9,6 +8,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.stereotype.Service;
+import com.naumen_contest.locationsfinder.Service.Dao.LocationsDAO222;
 
 /**
  *
@@ -17,9 +17,9 @@ import org.springframework.stereotype.Service;
 @Service("byScore")
 public class LocationsFinderByScore implements LocationsFinder{
     private final Map<String, LocationsAppriser> apprisers;
-    private final Map<String, LocationsDAO> daos;
+    private final Map<String, LocationsDAO222> daos;
 
-    public LocationsFinderByScore(Map<String, LocationsAppriser> apprisers, Map<String, LocationsDAO> daos) {
+    public LocationsFinderByScore(Map<String, LocationsAppriser> apprisers, Map<String, LocationsDAO222> daos) {
         this.apprisers = apprisers;
         this.daos = daos;
     }
@@ -30,7 +30,7 @@ public class LocationsFinderByScore implements LocationsFinder{
             String outputFile, 
             String criteria, 
             long limit) throws IOException {
-        LocationsDAO inputDAO = _getDAO(inputFile);
+        LocationsDAO222 inputDAO = _getDAO(inputFile);
         List<String> rawData = inputDAO.readFromFile(inputFile);
         
         if (!apprisers.containsKey(criteria)) {
@@ -46,7 +46,7 @@ public class LocationsFinderByScore implements LocationsFinder{
                 .collect(Collectors.toList());
     }
     
-    LocationsDAO _getDAO(String fileName) {
+    LocationsDAO222 _getDAO(String fileName) {
         String ext = FilenameUtils.getExtension(fileName).toLowerCase();
         if (!daos.containsKey(ext)) {
             throw new UnsupportedOperationException("Input data file with '%s' extenshion does not supported.".formatted(ext));

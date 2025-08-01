@@ -10,6 +10,6 @@ import java.util.List;
 
 
 
-public interface LocationsDAO {
+public interface LocationsDAO222 {
     public List<String> readFromFile(String fileName) throws IOException;
 }
