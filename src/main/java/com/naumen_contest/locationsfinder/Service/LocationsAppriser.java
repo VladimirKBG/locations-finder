@@ -1,5 +1,6 @@
 package com.naumen_contest.locationsfinder.Service;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -8,6 +9,6 @@ import java.util.Map;
  * @author Vladimir Aleksentsev
  */
 public interface LocationsAppriser {
-    public Map<Long, Long> appriseLocations(List<String> rawData);
+    public Map<Long, Long> appriseLocations(List<String> rawData) throws IOException;
     
 }

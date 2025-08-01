@@ -2,7 +2,7 @@
 package com.naumen_contest.locationsfinder.Service.Strategy;
 
 import com.naumen_contest.locationsfinder.Service.Dto.LocationsDTOWithR;
-import com.naumen_contest.locationsfinder.Service.Dto.OutputLocationsDto;
+import java.util.Map;
 
 /**
  *
@@ -10,6 +10,6 @@ import com.naumen_contest.locationsfinder.Service.Dto.OutputLocationsDto;
  */
 public interface NeighborsCountingStrategy {
     
-    public OutputLocationsDto countNeighbors(LocationsDTOWithR inputDto);
+    public Map<Long, Long> countNeighbors(LocationsDTOWithR inputDto);
 
 }
