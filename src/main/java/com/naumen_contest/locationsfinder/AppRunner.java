@@ -28,11 +28,19 @@ public class AppRunner implements CommandLineRunner {
         String criteria = cfg.getLocationsScoreCriteria();
         long limit = cfg.getOutputLocationsCount();
         
-        if (!lfs.containsKey(mode)) {
-            throw new UnsupportedOperationException("Not supported application mode: " + mode + ".");
-        }
-        
-        lfs.get(mode).findLocations(inputFile, outputFile, criteria, limit);
+        _getLocationFinder(mode).findLocations(inputFile, outputFile, criteria, limit);
     }
-
+    
+    private LocationsFinder _getLocationFinder(String mode) {
+        String key = "locationsFinder" + mode;
+        if (!lfs.containsKey(key)) {
+            StringBuilder msg = new StringBuilder();
+            msg.append("Not supported application mode: " + key + ". Now are supported:\n");
+            for (Map.Entry<String, LocationsFinder> entry : this.lfs.entrySet()) {
+                msg.append(entry.getKey() + "\n");
+            }
+            throw new UnsupportedOperationException(msg.toString());
+        }
+        return lfs.get(key);
+    }
 }

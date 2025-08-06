@@ -7,11 +7,13 @@ import com.naumen_contest.locationsfinder.Service.Strategy.NeighborsCountingStra
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * Created by Vladimir Aleksentsev, 2025
  */
+@Component
 public class LocationsAppriserByNeighborsCount implements LocationsAppriser {
     private final LocationsParserWithR parser;
     private final Map<String, NeighborsCountingStrategy> strategies;
@@ -21,18 +23,14 @@ public class LocationsAppriserByNeighborsCount implements LocationsAppriser {
         this.strategies = strategies;
     }
 
-
-    
-    
-
     @Override
     public Map<Long, Long> appriseLocations(List<String> rawData) throws IOException {
         LocationsDTOWithR dto = parser.parseData(rawData);
         NeighborsCountingStrategy strategy;
         if (dto.getSize() > 10000) {
-            strategy = _getStrategy("PlaneGrid");
+            strategy = _getStrategy("planeGridNeighborsCountingStrategy");
         } else {
-            strategy = _getStrategy("N2");
+            strategy = _getStrategy("n2NeighborsCountingStrategy");
         }
         return strategy.countNeighbors(dto);
     }

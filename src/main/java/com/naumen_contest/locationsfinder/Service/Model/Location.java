@@ -8,7 +8,7 @@ package com.naumen_contest.locationsfinder.Service.Model;
 public class Location {
     private static int count = 0;
     
-    private final int id;
+    private final long id;
     private final double x;
     private final double y;
     
@@ -33,7 +33,7 @@ public class Location {
         return y;
     }
 
-    public int Id() {
+    public long Id() {
         return id;
     }
 

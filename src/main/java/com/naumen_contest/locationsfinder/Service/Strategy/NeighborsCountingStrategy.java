@@ -11,5 +11,10 @@ import java.util.Map;
 public interface NeighborsCountingStrategy {
     
     public Map<Long, Long> countNeighbors(LocationsDTOWithR inputDto);
+    
+    default void _incrementScore(Map<Long, Long> map, long id) {
+        long oldValue = map.get(id);
+        map.put(id, oldValue + 1);
+    }
 
 }

@@ -1,7 +1,9 @@
 
 package com.naumen_contest.locationsfinder;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,14 +12,15 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @ConfigurationProperties
+@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class Config {
     
     private static final Config instance = new Config();
     
     private final String inputDataPath = "input.txt";
     private final String outputDataPath = "output.txt";
-    private final String applicationRunMode = "byScore";
-    private final String locationsScoreCriteria = "neighborsCount";
+    private final String applicationRunMode = "ByScore";
+    private final String locationsScoreCriteria = "ByNeighborsCount";
     private final long outputLocationsCount = 10;
     private final String columnSeparator = "\\s";
     private final String decimalSeparator = "\\.";
