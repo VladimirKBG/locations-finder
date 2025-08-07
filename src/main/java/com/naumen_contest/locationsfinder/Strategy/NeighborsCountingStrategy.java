@@ -1,7 +1,7 @@
 
-package com.naumen_contest.locationsfinder.Service.Strategy;
+package com.naumen_contest.locationsfinder.Strategy;
 
-import com.naumen_contest.locationsfinder.Service.Dto.LocationsDTOWithR;
+import com.naumen_contest.locationsfinder.Dto.LocationsDTOWithR;
 import java.util.Map;
 
 /**

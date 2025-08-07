@@ -2,7 +2,6 @@
 package com.naumen_contest.locationsfinder;
 
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +10,6 @@ import org.springframework.stereotype.Component;
  * Created by Vladimir Aleksentsev, 2025
  */
 @Component
-@ConfigurationProperties
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class Config {
     
@@ -27,7 +25,6 @@ public class Config {
     
     private final int bruteForceThreshold = 10;
     private final int locationIdBase = 0;
-
     private final int calculationAccuracy = 6;
     
     private Config() {

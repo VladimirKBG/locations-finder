@@ -1,4 +1,4 @@
-package com.naumen_contest.locationsfinder.Service.Dto;
+package com.naumen_contest.locationsfinder.Dto;
 
 /**
  *

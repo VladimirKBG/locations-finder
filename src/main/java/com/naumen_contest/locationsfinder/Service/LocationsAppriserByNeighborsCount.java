@@ -1,9 +1,9 @@
 
 package com.naumen_contest.locationsfinder.Service;
 
-import com.naumen_contest.locationsfinder.Service.Dto.LocationsDTOWithR;
-import com.naumen_contest.locationsfinder.Service.Parser.LocationsParserWithR;
-import com.naumen_contest.locationsfinder.Service.Strategy.NeighborsCountingStrategy;
+import com.naumen_contest.locationsfinder.Dto.LocationsDTOWithR;
+import com.naumen_contest.locationsfinder.Parser.LocationsParserWithR;
+import com.naumen_contest.locationsfinder.Strategy.NeighborsCountingStrategy;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;

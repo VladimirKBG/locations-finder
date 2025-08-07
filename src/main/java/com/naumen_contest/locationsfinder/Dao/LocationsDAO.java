@@ -1,4 +1,4 @@
-package com.naumen_contest.locationsfinder.Service.Dao;
+package com.naumen_contest.locationsfinder.Dao;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

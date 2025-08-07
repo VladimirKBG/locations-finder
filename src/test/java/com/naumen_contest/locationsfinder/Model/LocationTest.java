@@ -1,7 +1,6 @@
 
 package com.naumen_contest.locationsfinder.Model;
 
-import com.naumen_contest.locationsfinder.Service.Model.Location;
 import java.lang.reflect.Field;
 import java.util.concurrent.ThreadLocalRandom;
 import org.junit.jupiter.api.Assertions;

@@ -1,5 +1,5 @@
 
-package com.naumen_contest.locationsfinder.Service.Model;
+package com.naumen_contest.locationsfinder.Model;
 
 /**
  *

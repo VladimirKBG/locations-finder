@@ -1,9 +1,9 @@
-package com.naumen_contest.locationsfinder.Service.Parser;
+package com.naumen_contest.locationsfinder.Parser;
 
 import com.naumen_contest.locationsfinder.Config;
 import java.io.IOException;
 import java.util.List;
-import com.naumen_contest.locationsfinder.Service.Dto.LocationsDTO;
+import com.naumen_contest.locationsfinder.Dto.LocationsDTO;
 
 /**
  *

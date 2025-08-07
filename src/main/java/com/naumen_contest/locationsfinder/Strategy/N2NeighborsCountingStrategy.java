@@ -1,8 +1,8 @@
 
-package com.naumen_contest.locationsfinder.Service.Strategy;
+package com.naumen_contest.locationsfinder.Strategy;
 
-import com.naumen_contest.locationsfinder.Service.Dto.LocationsDTOWithR;
-import com.naumen_contest.locationsfinder.Service.Model.Location;
+import com.naumen_contest.locationsfinder.Dto.LocationsDTOWithR;
+import com.naumen_contest.locationsfinder.Model.Location;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

@@ -1,7 +1,7 @@
 
 package com.naumen_contest.locationsfinder.Service;
 
-import com.naumen_contest.locationsfinder.Service.Dao.LocationsDAO;
+import com.naumen_contest.locationsfinder.Dao.LocationsDAO;
 import java.io.IOException;
 import java.util.Comparator;
 import java.util.HashMap;

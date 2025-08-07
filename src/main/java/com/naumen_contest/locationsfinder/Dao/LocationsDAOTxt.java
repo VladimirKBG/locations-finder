@@ -1,4 +1,4 @@
-package com.naumen_contest.locationsfinder.Service.Dao;
+package com.naumen_contest.locationsfinder.Dao;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

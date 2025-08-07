@@ -1,6 +1,6 @@
-package com.naumen_contest.locationsfinder.Service.Dto;
+package com.naumen_contest.locationsfinder.Dto;
 
-import com.naumen_contest.locationsfinder.Service.Model.Location;
+import com.naumen_contest.locationsfinder.Model.Location;
 import java.util.List;
 
 /**

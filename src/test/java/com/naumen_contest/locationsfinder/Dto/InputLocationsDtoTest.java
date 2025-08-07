@@ -1,8 +1,7 @@
 
 package com.naumen_contest.locationsfinder.Dto;
 
-import com.naumen_contest.locationsfinder.Service.Dto.LocationsDTOWithR;
-import com.naumen_contest.locationsfinder.Service.Model.Location;
+import com.naumen_contest.locationsfinder.Model.Location;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
@@ -51,7 +50,6 @@ public class InputLocationsDtoTest {
         List<Location> locations;
         LocationsDTOWithR idc;
         for (int i = 0; i < testCount; i++) {
-            System.out.println(i);
             N = ThreadLocalRandom.current().nextInt(1, 10000000);
             R = ThreadLocalRandom.current().nextDouble(1.0e-100, 1.7e100);
             locations = new ArrayList<>(N);
