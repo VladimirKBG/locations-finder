@@ -15,6 +15,12 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class PlaneGridNeighborsCountingStrategy implements NeighborsCountingStrategy {
+    
+    PlaneGrid pg;
+
+    public PlaneGridNeighborsCountingStrategy(PlaneGrid pg) {
+        this.pg = pg;
+    }
 
     @Override
     public Map<Long, Long> countNeighbors(LocationsDTOWithR inputDto) {
@@ -26,7 +32,7 @@ public class PlaneGridNeighborsCountingStrategy implements NeighborsCountingStra
         for (Location loc : locs) {
             score.put(loc.Id(), 0L);
         }
-        PlaneGrid pg = new PlaneGrid(inputDto);
+        pg.initializePlaneGrid(inputDto);
         for (Location loc : locs) {
             for (var locList : pg.getNearestCells(loc.X(), loc.Y())) {
                 for (Location anotherLoc : locList) {

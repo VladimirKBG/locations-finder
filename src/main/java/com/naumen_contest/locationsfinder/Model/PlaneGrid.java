@@ -10,17 +10,17 @@ import java.util.List;
  * Created by Vladimir Aleksentsev, 2025
  */
 public class PlaneGrid {
-    private final List<List<List<Location>>> grid;
+    private List<List<List<Location>>> grid;
     private double xMin;
     private double xMax;
     private double yMin;
     private double yMax;
     private double dx;
     private double dy;
-    private final int sizeX;
-    private final int sizeY;
+    private int sizeX;
+    private int sizeY;
 
-    public PlaneGrid(LocationsDTOWithR dto) {
+    public void initializePlaneGrid(LocationsDTOWithR dto) {
         List<Location> locs = dto.getLocations();
         double R = dto.getRadius();
         xMin = Double.MAX_VALUE; xMax = Double.MIN_VALUE; yMin = Double.MAX_VALUE; yMax = Double.MIN_VALUE;
@@ -33,8 +33,8 @@ public class PlaneGrid {
         
         int gridSizeX = (int) ((xMax - xMin)/R);
         int gridSizeY = (int) ((yMax - yMin)/R);
-        sizeX = gridSizeX + 3;
-        sizeY = gridSizeY + 3;
+        sizeX = gridSizeX + 1;
+        sizeY = gridSizeY + 1;
         dx = (xMax - xMin)/Math.max(gridSizeX,1);
         dy = (yMax - yMin)/Math.max(gridSizeY,1);
         dx = dx > 0 ? dx : Double.MAX_VALUE;
@@ -43,7 +43,7 @@ public class PlaneGrid {
         grid = new ArrayList<>(sizeX);
         for (int i = 0; i < sizeX; i++) {
             List<List<Location>> column = new ArrayList<>();
-            for (int j = 0; j < sizeY + 3; j++) {
+            for (int j = 0; j < sizeY; j++) {
                 column.add(new ArrayList<>());
             }
             grid.add(column);
@@ -73,10 +73,10 @@ public class PlaneGrid {
     }
     
     private int _getXRow(double x) {
-        return (int) ((x - xMin)/dx + 1);
+        return (int) ((x - xMin)/dx);
     }
     
     private int _getYRow(double y) {
-        return (int) ((y - yMin)/dy + 1);
+        return (int) ((y - yMin)/dy);
     }
 }

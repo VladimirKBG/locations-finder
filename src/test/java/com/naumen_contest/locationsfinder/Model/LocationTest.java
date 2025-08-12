@@ -26,16 +26,16 @@ public class LocationTest {
     void createFixedLocations() {
         System.out.println("Start test createFixedLocations");
         Location loc1 = new Location(0.1d, 0.1d);
-        Assertions.assertEquals(0.1d, loc1.X());
-        Assertions.assertEquals(0.1d, loc1.Y());
+        Assertions.assertEquals(0.1d, loc1.X(), 1e-6);
+        Assertions.assertEquals(0.1d, loc1.Y(), 1e-6);
         Assertions.assertEquals(0 + baseId, loc1.Id());
         Location loc2 = new Location(0d, -0.1d);
-        Assertions.assertEquals(0d, loc2.X());
-        Assertions.assertEquals(-0.1d, loc2.Y());
+        Assertions.assertEquals(0d, loc2.X(), 1e-6);
+        Assertions.assertEquals(-0.1d, loc2.Y(), 1e-6);
         Assertions.assertEquals(1 + baseId, loc2.Id());
         Location loc3 = new Location(-0.1d, 0d);
-        Assertions.assertEquals(-0.1d, loc3.X());
-        Assertions.assertEquals(0d, loc3.Y());
+        Assertions.assertEquals(-0.1d, loc3.X(), 1e-6);
+        Assertions.assertEquals(0d, loc3.Y(), 1e-6);
         Assertions.assertEquals(2 + baseId, loc3.Id());
     }
     
@@ -49,10 +49,22 @@ public class LocationTest {
             double x = ThreadLocalRandom.current().nextDouble(-bound, bound);
             double y = ThreadLocalRandom.current().nextDouble(-bound, bound);
             loc = new Location(x, y);
-            Assertions.assertEquals(x, loc.X());
-            Assertions.assertEquals(y, loc.Y());
+            Assertions.assertEquals(x, loc.X(), 1e-6);
+            Assertions.assertEquals(y, loc.Y(), 1e-6);
             Assertions.assertEquals(i + baseId, loc.Id());
         }
+    }
+    
+    @Test
+    void testSquareDistanceTo() {
+        Location loc1 = new Location(1d, 1d);
+        Location loc2 = new Location(3d, -2d);
+        Location loc3 = new Location(-4d, -5d);
+        Assertions.assertEquals(13, loc1.squareDistanceTo(loc2), 1e-6);
+        Assertions.assertEquals(61, loc1.squareDistanceTo(loc3), 1e-6);
+        Assertions.assertEquals(0, loc1.squareDistanceTo(loc1), 1e-6);
+        Assertions.assertEquals(58, loc2.squareDistanceTo(loc3), 1e-6);
+        Assertions.assertEquals(58, loc3.squareDistanceTo(loc2), 1e-6);
     }
 
 }

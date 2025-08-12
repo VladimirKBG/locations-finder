@@ -36,10 +36,12 @@ public interface LocationsDAO {
     
     default Path _getOtputPath(String fileName) throws IOException {
         Path path = Paths.get(fileName);
-        Files.createFile(path);
+        if (!Files.exists(path)) {
+            Files.createFile(path);
+        }
         if (!Files.isWritable(path)) {
             throw new AccessDeniedException(
-                "File is not writabl-e: '" + path.toAbsolutePath() + "'."
+                "File is not writable: '" + path.toAbsolutePath() + "'."
             );
         }
         return path;

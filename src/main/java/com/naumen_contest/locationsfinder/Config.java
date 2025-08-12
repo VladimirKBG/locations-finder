@@ -74,9 +74,6 @@ public class Config {
         return decimalSeparator;
     }
     
-    
-    
-    
     @Override
     public String toString() {
         return "Config{" + "bruteForceThreshold=" + bruteForceThreshold + ", outputLocationsCount=" + outputLocationsCount + ", locationIdBase=" + locationIdBase + ", inputDataPath=" + inputDataPath + ", outputDataPath=" + outputDataPath + ", calculationAccuracy=" + calculationAccuracy + '}';

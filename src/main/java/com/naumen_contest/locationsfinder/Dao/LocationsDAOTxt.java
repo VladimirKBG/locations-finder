@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.List;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
@@ -29,7 +30,7 @@ public class LocationsDAOTxt implements LocationsDAO {
     public void writeToFile(String fileName, List<String> data) throws IOException {
         Path path = _getOtputPath(fileName);
         
-        Files.write(path, data, StandardCharsets.UTF_8);
+        Files.write(path, data, StandardCharsets.UTF_8, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE);
     }
     
     @Override

@@ -61,5 +61,4 @@ public class LocationsParserWithR extends LocationsParser {
         }
         return new LocationsDTOWithR(count, range, locations);
     }
-    
 }
