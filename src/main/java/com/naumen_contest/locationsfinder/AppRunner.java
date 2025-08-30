@@ -26,8 +26,6 @@ public class AppRunner implements CommandLineRunner {
     
     @Override
     public void run(String... args) throws IOException {
-        
-        
         String inputFile = cfg.getInputDataPath();
         String outputFile = cfg.getOutputDataPath();
         String mode = cfg.getApplicationRunMode();
