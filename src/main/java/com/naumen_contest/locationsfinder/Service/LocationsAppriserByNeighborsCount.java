@@ -7,6 +7,8 @@ import com.naumen_contest.locationsfinder.Strategy.NeighborsCountingStrategy;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,6 +17,8 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class LocationsAppriserByNeighborsCount implements LocationsAppriser {
+    private static final Logger log = LoggerFactory.getLogger(LocationsAppriserByNeighborsCount.class);
+    
     private final LocationsParserWithR parser;
     private final Map<String, NeighborsCountingStrategy> strategies;
 
@@ -41,7 +45,9 @@ public class LocationsAppriserByNeighborsCount implements LocationsAppriser {
                     "Neighbors counting strategy with name " + strategyName + " does not exist."
             );
         }
-        return strategies.get(strategyName);  
+        NeighborsCountingStrategy s = strategies.get(strategyName);
+        log.info("In LocationsAppriserByNeighborsCount {} are choosen.", s.toString());
+        return s;  
     }
     
 

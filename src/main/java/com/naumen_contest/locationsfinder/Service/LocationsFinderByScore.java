@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import org.apache.commons.io.FilenameUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,6 +19,8 @@ import org.springframework.stereotype.Service;
  */
 @Service()
 public class LocationsFinderByScore implements LocationsFinder{
+    private static final Logger log = LoggerFactory.getLogger(LocationsFinderByScore.class);
+    
     private final Map<String, LocationsAppriser> apprisers;
     private final Map<String, LocationsDAO> daos;
 
@@ -56,7 +60,9 @@ public class LocationsFinderByScore implements LocationsFinder{
         if (!daos.containsKey(ext)) {
             throw new UnsupportedOperationException("Input data file with '%s' extenshion does not supported.".formatted(ext));
         }
-        return daos.get(ext);
+        LocationsDAO dao = daos.get(ext);
+        log.info("In LocationsFinderByScore {} are choosen.", dao.toString());
+        return dao;
     }
     
     private LocationsAppriser _getLocationsAppriser(String criteria) {
@@ -69,6 +75,8 @@ public class LocationsFinderByScore implements LocationsFinder{
             }
             throw new UnsupportedOperationException(msg.toString());
         }
-        return apprisers.get(key);
+        LocationsAppriser la = apprisers.get(key);
+        log.info("In LocationsFinderByScore {} are choosen.", la.toString());
+        return la;
     }
 }

@@ -3,6 +3,8 @@ package com.naumen_contest.locationsfinder;
 import com.naumen_contest.locationsfinder.Service.LocationsFinder;
 import java.io.IOException;
 import java.util.Map;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +16,8 @@ import org.springframework.stereotype.Component;
 public class AppRunner implements CommandLineRunner {
     private final Map<String, LocationsFinder> lfs;
     private final Config cfg;
+    
+    private static final Logger log = LoggerFactory.getLogger(AppRunner.class);
 
     public AppRunner(Map<String, LocationsFinder> lfs, Config cfg) {
         this.lfs = lfs;
@@ -22,6 +26,8 @@ public class AppRunner implements CommandLineRunner {
     
     @Override
     public void run(String... args) throws IOException {
+        
+        
         String inputFile = cfg.getInputDataPath();
         String outputFile = cfg.getOutputDataPath();
         String mode = cfg.getApplicationRunMode();
@@ -41,6 +47,8 @@ public class AppRunner implements CommandLineRunner {
             }
             throw new UnsupportedOperationException(msg.toString());
         }
-        return lfs.get(key);
+        LocationsFinder lf = lfs.get(key);
+        log.info("In AppRunner {} are choosen.", lf.toString());
+        return lf;
     }
 }

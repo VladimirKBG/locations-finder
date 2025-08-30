@@ -15,7 +15,7 @@ public class Config {
     
     private static final Config instance = new Config();
     
-    private final String inputDataPath = "input_10_000_000.txt";
+    private final String inputDataPath = "input_1_000_000.txt";
     private final String outputDataPath = "output.txt";
     private final String applicationRunMode = "ByScore";
     private final String locationsScoreCriteria = "ByNeighborsCount";
