@@ -18,8 +18,8 @@ public class LocationsDTOWithR implements LocationsDTO {
             throw new IllegalArgumentException("Locations count must be non-negative");
         if (N != locations.size())
             throw new IllegalArgumentException(
-                    "Wrong number of Locations was read: %s, but %s was expected "
-                            + "from headers line.".formatted(locations.size(), N));
+                    ("Wrong number of Locations was read: %s, but %s was expected "
+                            + "from headers line.").formatted(locations.size(), N));
         this.radius = radius;
         this.locations = locations;
     }

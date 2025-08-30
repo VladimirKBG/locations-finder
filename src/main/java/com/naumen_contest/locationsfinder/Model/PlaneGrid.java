@@ -4,11 +4,13 @@ package com.naumen_contest.locationsfinder.Model;
 import com.naumen_contest.locationsfinder.Dto.LocationsDTOWithR;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * Created by Vladimir Aleksentsev, 2025
  */
+@Component
 public class PlaneGrid {
     private List<List<List<Location>>> grid;
     private double xMin;
@@ -42,7 +44,7 @@ public class PlaneGrid {
 
         grid = new ArrayList<>(sizeX);
         for (int i = 0; i < sizeX; i++) {
-            List<List<Location>> column = new ArrayList<>();
+            List<List<Location>> column = new ArrayList<>(sizeY);
             for (int j = 0; j < sizeY; j++) {
                 column.add(new ArrayList<>());
             }
